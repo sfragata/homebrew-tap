@@ -5,24 +5,24 @@
 class PlexExporter < Formula
   desc "Prometheus plex exporter"
   homepage "https://github.com/sfragata/plex_exporter/"
-  version "1.0.0"
+  version "1.0.1"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.0/plex_exporter_1.0.0_Darwin_x86_64.tar.gz"
-    sha256 "3d615dc0e9a4f3e25e0a27f8ad8de4decfde7673f366d4320c5ac837dfdd65c4"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.1/plex_exporter_1.0.1_Darwin_x86_64.tar.gz"
+    sha256 "ac5a03a5b3020a999cca037d26a5a2150a208e72f0f1687d39ed7dbb82fa1ea3"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.0/plex_exporter_1.0.0_Darwin_arm64.tar.gz"
-    sha256 "a2cd64df351ecbd16f7a8fa8dfa935038349eeb2e8803b5a15b3ab92be0d1816"
+    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.1/plex_exporter_1.0.1_Darwin_arm64.tar.gz"
+    sha256 "eee038dfe2380a1fc02e644a0611840df107240b9886d23528a35f069d4226c1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.0/plex_exporter_1.0.0_Linux_x86_64.tar.gz"
-    sha256 "58539e3b877c86e8b4d044b6deff087cf3d0fd4b7a7347906a58a69b75f52ef1"
+    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.1/plex_exporter_1.0.1_Linux_x86_64.tar.gz"
+    sha256 "7ca8f725953a26770fb609f98c1c89acc8522964f680ba104cd345e998e135c3"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.0/plex_exporter_1.0.0_Linux_arm64.tar.gz"
-    sha256 "9fddc7a678d2bf965557639f65c3a4dfab80ee4d37fbd4cab5a80a7a447d2b07"
+    url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.1/plex_exporter_1.0.1_Linux_arm64.tar.gz"
+    sha256 "92473a173da3c9fbd3dbf86134f2de10d6077814a7bd95ac08e8d82bcd87416d"
   end
 
   def install
