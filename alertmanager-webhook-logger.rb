@@ -5,28 +5,28 @@
 class AlertmanagerWebhookLogger < Formula
   desc "Webhook to log json sent from alertmanager"
   homepage "https://github.com/sfragata/alertmanager-webhook-logger/"
-  version "1.0.0"
+  version "1.0.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.0/alertmanager-webhook-logger_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "42931cf874a6364aaae0b8442550360f4643579757cd60066c7eda53b01bd755"
+      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.1/alertmanager-webhook-logger_1.0.1_Darwin_x86_64.tar.gz"
+      sha256 "85074c3c1df570e9de78f01cffc123492bd381c86504e73027c7a0360c9152dc"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.0/alertmanager-webhook-logger_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "6effec3c2ec6281c7d440be7827c2f24b2ed698f9ce649ddad419179d8048d57"
+      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.1/alertmanager-webhook-logger_1.0.1_Darwin_arm64.tar.gz"
+      sha256 "002c05845b741ed0805692cd7c687b4bab4009e23f49fe95d713e5ce1d1263e8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.0/alertmanager-webhook-logger_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "223e9e00ed4aebc23857cb1043bc800693bba393a29d2320931ca2881e2ee373"
+      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.1/alertmanager-webhook-logger_1.0.1_Linux_x86_64.tar.gz"
+      sha256 "49a9c8ab0a653a65f0774af990a4c58406e390cd543ea334eebf05f4d3fb7fda"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.0/alertmanager-webhook-logger_1.0.0_Linux_arm64.tar.gz"
-      sha256 "3b7b7f5e8a551fac97dbfb734359001d4be4a1ad12853b417ba6e60d54863ec7"
+      url "https://github.com/sfragata/alertmanager-webhook-logger/releases/download/v1.0.1/alertmanager-webhook-logger_1.0.1_Linux_arm64.tar.gz"
+      sha256 "b74aad2ddfb03568ffe952560148452b48bb12a24f42368d80af36220723b458"
     end
   end
 
