@@ -5,20 +5,20 @@
 class PlexExporter < Formula
   desc "Prometheus plex exporter"
   homepage "https://github.com/sfragata/plex_exporter/"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.3/plex_exporter_1.0.3_darwin_amd64.tar.gz"
-      sha256 "068591fe0ff943565db0d969ede154871b82a4b8c8ed340539f57444bed63991"
+      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.4/plex_exporter_1.0.4_darwin_amd64.tar.gz"
+      sha256 "3e0c2d08aa479b576b9aa246b6a59ad5ac8430aff984e5db5af6ed85b3ecad52"
 
       def install
         bin.install "plex_exporter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.3/plex_exporter_1.0.3_darwin_arm64.tar.gz"
-      sha256 "73454f53639b59f97a7a440a5b6382a7254527c7c0d63bc12f1add103b46fc33"
+      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.4/plex_exporter_1.0.4_darwin_arm64.tar.gz"
+      sha256 "4b21213150307e57d343859e7f5a0f7f5520ed34a96b0cbf2228e64c28c9b688"
 
       def install
         bin.install "plex_exporter"
@@ -28,16 +28,16 @@ class PlexExporter < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.3/plex_exporter_1.0.3_linux_arm64.tar.gz"
-      sha256 "e57f0c0c91d0ccacb03b61bcd11271b2a0677e4d4f0bc079e0a1e3f8b4c0f1b9"
+      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.4/plex_exporter_1.0.4_linux_arm64.tar.gz"
+      sha256 "6ccaf9226b8f9fed288d1ba6b86804eae1cf729d46e4b42bb84de9ab8395a990"
 
       def install
         bin.install "plex_exporter"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.3/plex_exporter_1.0.3_linux_amd64.tar.gz"
-      sha256 "f8c9fd1a39f0d83dda6ef7099511a2f87ea282d51f47c669591c2fe8fe1bf3b2"
+      url "https://github.com/sfragata/plex_exporter/releases/download/v1.0.4/plex_exporter_1.0.4_linux_amd64.tar.gz"
+      sha256 "3d4855fd7b2fa86590c5a4e77babaeb986a36cfa620a3c7f968943d3730be082"
 
       def install
         bin.install "plex_exporter"
